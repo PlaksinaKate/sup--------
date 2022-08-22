@@ -6,13 +6,14 @@ body {
 button {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .layout {
   position: relative;
 }
 
-.layout::before {
+/* .layout::before {
   content: "";
   position: absolute;
   top: 0;
@@ -21,7 +22,7 @@ button {
   background: url(../imgs/Desktop.png) no-repeat 50% 0;
   height: 7866px;
   opacity: .5;
-}
+} */
 
 .container {
   max-width: 1220px;
@@ -81,6 +82,16 @@ header {
   justify-content: end;
 }
 
+.header__logo {
+  transition: all .5s ease;
+
+  cursor: pointer;
+}
+
+.header__logo path:hover {
+  fill: #0093A1;
+}
+
 .header__btn {
   font-family: 'Comfortaa';
   font-style: normal;
@@ -93,6 +104,13 @@ header {
   border: none;
 
   margin: 0 103px 0 101px;
+
+  transition: all .5s ease;
+}
+
+.header__btn:hover {
+  background-color: #B9C400;
+  color: #262C27;
 }
 
 .header__phone {
@@ -103,6 +121,13 @@ header {
   line-height: 23px;
 
   margin-right: 20px;
+  cursor: pointer;
+
+  transition: all .5s ease;
+}
+
+.header__phone:hover {
+  color: #B9C400;
 }
 
 /* main_block */
@@ -182,7 +207,7 @@ header {
 /* about */
 
 #about {
-  margin-top: -94%;
+  margin-top: -97%;
 }
 
 .about_row {
@@ -234,6 +259,12 @@ header {
   position: absolute;
   right: -6%;
   bottom: -0.5%;
+
+  transition: all .8s ease;
+}
+
+.about__btn:hover {
+  transform: scale(1.2);
 }
 
 .about_line {
@@ -274,7 +305,7 @@ tr td:first-child {
 }
 
 #specs {
-  margin-top: 31.3%;
+  margin-top: 32.3%;
 }
 
 .specs__title {
@@ -335,6 +366,13 @@ tr td:first-child {
   position: absolute;
   left: 98%;
   top: 56%;
+
+  transition: all .8s ease;
+
+}
+
+.ray_air__price:hover {
+  transform: scale(1.2);
 }
 
 .ray_air__row {
@@ -353,6 +391,14 @@ tr td:first-child {
 
   padding: 18px 197px;
   border: 2px solid #0093A1;
+
+  transition: all .8s ease;
+}
+
+.ray_air_btn:hover {
+  color: #262C27;
+  background-color: #B9C400;
+  border: transparent;
 }
 
 /* micro */
@@ -374,6 +420,14 @@ tr td:first-child {
   position: absolute;
   right: 30.3%;
   top: -27%;
+
+  cursor: pointer;
+
+  transition: all 1s ease;
+}
+
+.micro__play_video:hover {
+  transform: scale(1.2);
 }
 
 .micro__title {
@@ -478,6 +532,17 @@ footer {
   transform: scale(2.4);
   margin-right: 10%;
   margin-top: 1%;
+
+  cursor: pointer;
+}
+
+
+.footer__logo path {
+  transition: all 1s ease;
+}
+
+.footer__logo path:hover {
+  fill: #0093A1;
 }
 
 input {
@@ -489,6 +554,25 @@ input {
   max-width: 500px;
   width: 100%;
   background: transparent;
+  transition: all 1s ease;
+
+}
+
+input:focus,
+input:active {
+  opacity: 0.8;
+  color: #FFFFFF;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+
+  text-decoration: none;
+  outline: none;
+
+  border: none;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 input::placeholder {
@@ -515,6 +599,12 @@ input::placeholder {
 
   margin-top: 50px;
   margin-bottom: 98px;
+  transition: all 1s ease;
+
+}
+
+.footer__btn:hover {
+  background-color: #0093A1;
 }
 
 .footer__instagram_title {
@@ -537,6 +627,8 @@ input::placeholder {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
+
+  transition: all 1s ease;
 }
 
 .footer_links:hover {
@@ -547,3 +639,79 @@ a {
   text-decoration: none;
 }
 
+@media screen and (max-width:1800px) {
+  #specs {
+    margin-top: 28.3%;
+  }
+}
+
+@media screen and (max-width:1750px) {
+  .main_block__img_sup {
+    margin-top: -15%;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  #specs {
+    margin-top: 23.3%;
+  }
+}
+
+@media screen and (max-width:1600px) {
+  #about {
+    margin-top: -107%;
+  }
+
+  #specs {
+    margin-top: 30.3%;
+}
+}
+
+@media screen and (max-width:1500px) {
+  #about {
+    margin-top: -120%;
+  }
+
+  #specs {
+    margin-top: 38.3%;
+}
+}
+
+@media screen and (max-width:1300px) {
+  #about {
+    margin-top: -133%;
+  }
+
+  .container {
+    max-width: 1100px;
+  }
+
+  #specs {
+    margin-top: 32.3%;
+}
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .main_block__img_sup {
+    width: 110%;
+    height: 1070px;
+  }
+
+  #about {
+    margin-top: -150%;
+  }
+
+  .about__img {
+    width: 110%
+  }
+}
+
+@media screen and (max-width:1100px) {
+  #about {
+    margin-top: -163%;
+  }
+}
